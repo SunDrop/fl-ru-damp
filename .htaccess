@@ -132,16 +132,16 @@ RewriteRule ^adminback(.*)$ /router.php?pg=/adminback$1 [L]
 
 #RewriteRule ^search/([^/]+)[/]?([^/]*)[/]?$		/search/?action=view&type=$1&page=$2 [NS,L]
 #RewriteRule ^search/([^/]+)[/]?$			/search/?action=view&type=$1 [NS,L]
-##	для поиска
+##	┬д┬л├п ┬п┬о┬и├б┬к┬а
 
 RewriteRule ^catalog/section/([^/]+)[/]?$		/catalog/section/?id=$1 [NS,L]
 
 RewriteRule ^newyear2009/([^/]+)[/]?$			/newyear2009/?v=$1 [NS,L]
-##	для новогодних поздравлений
+##	┬д┬л├п ┬н┬о┬в┬о┬г┬о┬д┬н┬и├е ┬п┬о┬з┬д├а┬а┬в┬л┬е┬н┬и┬й
 RewriteRule ^news/([^/]+)[/]?$			/news/?date=$1 [NS,L]
-##	для новостей
+##	┬д┬л├п ┬н┬о┬в┬о├б├в┬е┬й
 RewriteRule ^contacts/([^/]+)[/]?$		/contacts/?p=$1 [NS,L,QSA]
-##	для контактов
+##	┬д┬л├п ┬к┬о┬н├в┬а┬к├в┬о┬в
 RewriteCond   %{REQUEST_URI}               !\.php
 RewriteRule ^promo-([^/]+)[/]?$			/promo/index.php?p=$1 [NS,L,QSA]
 RewriteCond   %{REQUEST_URI}               !\.php
@@ -150,24 +150,24 @@ RewriteRule ^norisk/([^/]+)[/]?$			/norisk/index.php?p=$1 [NS,L,QSA]
 RewriteRule ^users[/]?$				/freelancers/ [R]
 ##	 
 RewriteRule ^users/(([^/]{1,2})[^/]*)/resume/([^/]*)$	/upload/users/$2/$1/resume/$3
-##	для прямой загрузки файлов
+##	┬д┬л├п ┬п├а├п┬м┬о┬й ┬з┬а┬г├а├г┬з┬к┬и ├д┬а┬й┬л┬о┬в
 RewriteRule ^users/(([^/]{1,2})[^/]*)/upload/([^/]*)$	/upload/users/$2/$1/upload/$3
-##	для прямой загрузки файлов
+##	┬д┬л├п ┬п├а├п┬м┬о┬й ┬з┬а┬г├а├г┬з┬к┬и ├д┬а┬й┬л┬о┬в
 RewriteRule ^users/(([^/]{1,2})[^/]*)/tmpproj/([^/]*)$	/upload/users/$2/$1/tmpproj/$3
-##	для прямой загрузки файлов
+##	┬д┬л├п ┬п├а├п┬м┬о┬й ┬з┬а┬г├а├г┬з┬к┬и ├д┬а┬й┬л┬о┬в
 RewriteRule ^users/(([^/]{1,2})[^/]*)/foto/([^/]*)$     /upload/users/$2/$1/foto/$3 
 RewriteRule ^users/(([^/]{1,2})[^/]*)/logo/([^/]*)$     /upload/users/$2/$1/logo/$3 
 RewriteRule ^users/(([^/]{1,2})[^/]*)/contacts/([^/]*)$     /upload/users/$2/$1/contacts/$3 
 RewriteRule ^users/([^/]+)/addnote/$		/user/addnote.php?user=$1
-##	для заметок
+##	┬д┬л├п ┬з┬а┬м┬е├в┬о┬к
 RewriteRule ^users/([^/]+)/uploads/([^/]*)[/]?$	/user/uploads/index.php?user=$1&p=$2
-##	для написать\загрузить
+##	┬д┬л├п ┬н┬а┬п┬и├б┬а├в├м\┬з┬а┬г├а├г┬з┬и├в├м
 RewriteRule ^users/([^/]+)/setup[/]?([^/]*)[/]?([^/]*)[/]?$ /user/setup/index.php?user=$1&p=$2&target=$3 [QSA]
-##	для настроек
+##	┬д┬л├п ┬н┬а├б├в├а┬о┬е┬к
 RewriteRule ^users/([^/]+)/([^\.]+)\.php$	/user/$2.php?user=$1 [QSA]
-##	для viewproj
+##	┬д┬л├п viewproj
  RewriteRule ^users/([^/]+)[/]?([^/]*)[/]?$	/user/index.php?user=$1&p=$2 [NS,QSA]
-##	для просмотра ин
+##	┬д┬л├п ┬п├а┬о├б┬м┬о├в├а┬а ┬и┬н
 RewriteRule ^freelancers/([-_A-Za-z0-9]+)$ /freelancers/$1/ [R=301,L]
 RewriteRule ^freelancers/([-_A-Za-z0-9]+)/$ freelancers/index.php?prof=$1 [NS,QSA]
 
@@ -253,3 +253,4 @@ RewriteRule ^bezopasnaya-sdelka(.*)       /sbr$1 [L]
 
 php_value error_log "/proj/free-lance/.error.log"
 #test3
+# test4
